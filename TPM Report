@@ -23,11 +23,8 @@ var dd = {
 
 		    
 			text:[
-			//Var inserts unit name
-            unitName +' '+ month,
-			// add dynamic month function 
-		    ' OJT Cover Page',
-	    	],
+			//Var inserts unit name and month in title
+            unitName +' '+ month, ' OJT Cover Page',],
 			style: 'header',
 		
 		},
