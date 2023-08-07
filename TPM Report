@@ -1,10 +1,13 @@
 // playground requires you to assign document definition to a variable called dd
 var unitName = '502 LRS'
 var tsc = 'C'
-var afsc = '2T151'
+var afsc = '2G051'
+var afsc2 = '3P071'
 var timeInTraining = '13'
 var memberName = 'SSgt Snuffy, Ryan'
 
+var docDefinition = {
+  pageSize: 'A5',}
 
 var dd = {
 	content: [
@@ -22,26 +25,26 @@ var dd = {
 		},
 		//Table for TSC Totals
 		{
-			style: 'tableExample',
+			style: 'tscMain',
 			table: {
-			   	widths: [100, '*', 200,'*'],
+			   	widths: ['*', '*', '*','*'],
 				body: [
-					['UGT Levels', 'Initial', 'Retraining', 'Total'],
-					['3 Lvl', 'Total', 'Total', 'Total'],
-					['5 Lvl', 'Total', 'Total', 'Total'],
-					['7 Lvl', 'Total', 'Total', 'Total'],
+					[{text: 'UGT Levels', style: 'tableHeader'}, {text: 'Initial:', style: 'tableHeader'},{text: 'Retraining:', style: 'tableHeader'},{text: 'Total:', style: 'tableHeader'}],
+					['3 Lvl', '0', '0', '0'],
+					['5 Lvl', '3', '0', '3'],
+					['7 Lvl', '10', '1', '11'],
 					
 				]
 			}
 		},
 		//Table for TSC P,K,T
 		{
-			style: 'tableExample',
+			style: 'tscMain',
 			table: {
-			   	widths: [100, '*', 200,'*'],
+			   	widths: ['*', '*', '*','*'],
 				body: [
 					['TSC P', 'TSC K', 'TSC Q', 'TSC T'],
-					['Total', 'Totat', 'Total', 'Total'],
+					['1', '0', '0', '0'],
 				
 					
 				]
@@ -53,11 +56,9 @@ var dd = {
 			table: {
 			   	widths: [ '*','*'],
 				body: [
-					[{text: 'CDC Failures', style: 'tableData'}, {text: 'Over 24 Months', style: 'tableData'}],
-					['Total', 'Total'],
-			        [{text: 'Upgraded Last Month', style: 'tableData'}, {text: 'Awaiting 7 Lvl Course ', style: 'tableData'}],
-			        ['Total', 'Total'],
-					
+					[{text: 'CDC Failures:', style: 'tableHeader'}, {text: 'Over 24 Months:', style: 'tableHeader'}],
+					[{text: '1', style: 'tableData'}, {text: '2', style: 'tableData'}],
+					[{text: '3', style: 'tableData'}, {text: '0', style: 'tableData'}],
 				]
 			}
 		},	
@@ -67,13 +68,14 @@ var dd = {
             style: 'header',
         },
         //Member Data
-        {
+       
+        /* {
 			style: 'tableExample',
 			table: {
 			   	widths: [ '*','*','*'],
 				body: [
                     //Headers for ojt data table
-					[{ text: memberName, bold: true, alignment: 'center', decoration: 'underline' }, {text: 'CDC Data/Core Task Competion', style: 'tableData'},{text: 'Remarks', style: 'tableData'}],
+					[{ text: memberName, bold: true, alignment: 'center', decoration: 'underline' }, {text: 'CDC Data/Core Task Competion', style: 'tableHeader'},{text: 'Remarks', style: 'tableHeader'}],
 			       // Data for ojt data table 
 
                    //member data 
@@ -115,7 +117,7 @@ var dd = {
 			   	widths: [ '*','*','*'],
 				body: [
                     //Headers for ojt data table
-					[{ text: memberName, bold: true, alignment: 'center', decoration: 'underline' }, {text: 'CDC Data/Core Task Competion', style: 'tableData'},{text: 'Remarks', style: 'tableData'}],
+					[{ text: memberName, bold: true, alignment: 'center', decoration: 'underline' }, {text: 'CDC Data/Core Task Competion', style: 'tableHeader'},{text: 'Remarks', style: 'tableHeader'}],
 			       // Data for ojt data table 
 
                    //member data 
@@ -151,14 +153,14 @@ var dd = {
 				]
 			}
 		},	
-
+*/
         {
-			style: 'ojtTable',
+			style: 'tableExample',
 			table: {
 			   	widths: [ '*','*','*'],
 				body: [
                     //Headers for ojt data table
-					[{ text: memberName, bold: true, alignment: 'center', decoration: 'underline' }, {text: 'CDC Data/Core Task Competion', style: 'tableData'},{text: 'Remarks', style: 'tableData'}],
+					[{ text: memberName, bold: true, alignment: 'center', decoration: 'underline' }, {text: 'CDC Data/Core Task Competion', style: 'tableHeader'},{text: 'Remarks', style: 'tableHeader'}],
 			       // Data for ojt data table 
 
                    //member data 
@@ -169,8 +171,9 @@ var dd = {
                                 table: {
                                     body: [
                                         ['TSC', {text:tsc, style: 'memberData'}],
-                                        ['PAFSC', afsc],
-                                        ['Time in Training', timeInTraining]
+                                        ['PAFSC', {text:afsc, style: 'memberData'}],
+                                      //  ['2AFSC', {text:afsc2, style: 'memberData'}],
+                                        ['Time in Training', {text:timeInTraining, style: 'memberData'}]
                                     ]
                                 },
                                 layout: 'noBorders'
@@ -207,7 +210,8 @@ var dd = {
 		header: {
 			fontSize: 18,
 			bold: true,
-			alignment: 'center'
+			alignment: 'center',
+			decoration: 'underline'
 		},
 		
 		tableExample: {
@@ -220,14 +224,15 @@ var dd = {
 		
 		tableHeader: {
 			bold: true,
-			fontSize: 20,
-			color: 'black'
+			alignment: 'center',
+			decoration: 'underline'
 		},
 		
 		tableData: {
-			bold: true,
-			alignment: 'center'
+			alignment: 'center',
+			
 		},
+		
 		
 		memberDataFormat: {
 		    fontSize: 8,
@@ -243,9 +248,16 @@ var dd = {
         
         coreTask: {
             margin: [0,5,0,0]
+         },
+        
+         tscMain: {
+	    	margin: [15, 5, 0, 15],
+	    	widths: [100, 100, 100,100],
+	    	alignment: 'center'
          }
+
 
 	}
 	
-	
 }
+	
