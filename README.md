@@ -2,6 +2,20 @@
 
 
 
+## Questions 
+- How to pass in dates to functions
+- 2AFSC
+- If we sort the list in workshop will it be passed in the same order 
+
+## To Do 
+- Function for sorting by time in training and TSC
+
+## For Later 
+- unit_hierarchy 
+- parent_pas
+
+
+
 ## TPM REQs 
 - CDC Pass rates 
 	- Over 90%

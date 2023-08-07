@@ -1,14 +1,22 @@
-// playground requires you to assign document definition to a variable called dd
-var unitName = '502 LRS'
+
+
+var today = new Date();
+
+// Getting full month name (e.g. "June")
+var month = today.toLocaleString('default', { month: 'long' });
+console.log(month);
+
+//temp hardcoded variables for dev
+var unitName = '502nd LRS'
 var tsc = 'C'
 var afsc = '2G051'
 var afsc2 = '3P071'
 var timeInTraining = '13'
 var memberName = 'SSgt Snuffy, Ryan'
 
-var docDefinition = {
+/*var docDefinition = {
   pageSize: 'A5',}
-
+*/
 var dd = {
 	content: [
 		{
@@ -16,9 +24,9 @@ var dd = {
 		    
 			text:[
 			//Var inserts unit name
-            unitName,
+            unitName +' '+ month,
 			// add dynamic month function 
-		    ' OJT COVER PAGE\n',
+		    ' OJT Cover Page',
 	    	],
 			style: 'header',
 		
@@ -29,10 +37,10 @@ var dd = {
 			table: {
 			   	widths: ['*', '*', '*','*'],
 				body: [
-					[{text: 'UGT Levels', style: 'tableHeader'}, {text: 'Initial:', style: 'tableHeader'},{text: 'Retraining:', style: 'tableHeader'},{text: 'Total:', style: 'tableHeader'}],
-					['3 Lvl', '0', '0', '0'],
-					['5 Lvl', '3', '0', '3'],
-					['7 Lvl', '10', '1', '11'],
+					[{text: 'UGT Levels', style: 'tableHeader', fillColor: '#979dac'}, {text: 'Initial:', style: 'tableHeader', fillColor: '#979dac'},{text: 'Retraining:', style: 'tableHeader', fillColor: '#979dac'},{text: 'Total:', style: 'tableHeader', fillColor: '#979dac'}],
+					[{text:'3 Lvl', bold: true}, '0', '0', '0'],
+					[{text:'5 Lvl', bold: true}, '3', '0', '3'],
+					[{text:'7 Lvl', bold: true}, '10', '1', '11'],
 					
 				]
 			}
@@ -43,7 +51,11 @@ var dd = {
 			table: {
 			   	widths: ['*', '*', '*','*'],
 				body: [
-					['TSC P', 'TSC K', 'TSC Q', 'TSC T'],
+					[{text:'TSC P', style: 'tableHeader', fillColor: '#979dac'},
+					 {text:'TSC K', style: 'tableHeader', fillColor: '#979dac'},
+					 {text:'TSC Q', style: 'tableHeader', fillColor: '#979dac'},
+					 {text:'TSC T', style: 'tableHeader', fillColor: '#979dac'}],
+					
 					['1', '0', '0', '0'],
 				
 					
@@ -56,9 +68,9 @@ var dd = {
 			table: {
 			   	widths: [ '*','*'],
 				body: [
-					[{text: 'CDC Failures:', style: 'tableHeader'}, {text: 'Over 24 Months:', style: 'tableHeader'}],
+					[{text: 'CDC Failures:', style: 'tableHeader', fillColor: '#979dac'}, {text: 'Over 24 Months:', style: 'tableHeader', fillColor: '#979dac'}],
 					[{text: '1', style: 'tableData'}, {text: '2', style: 'tableData'}],
-					[{text: 'Upgraded Last Month:', style: 'tableHeader'}, {text: 'Awaiting 7 Lvl Course:', style: 'tableHeader'}],
+					[{text: 'Upgraded Last Month:', style: 'tableHeader', fillColor: '#979dac'}, {text: 'Awaiting 7 Lvl Course:', style: 'tableHeader', fillColor: '#979dac'}],
 					[{text: '3', style: 'tableData'}, {text: '0', style: 'tableData'}],
 				]
 			}
@@ -171,10 +183,10 @@ var dd = {
                                 style: 'memberDataFormat',
                                 table: {
                                     body: [
-                                        ['TSC', {text:tsc, style: 'memberData'}],
-                                        ['PAFSC', {text:afsc, style: 'memberData'}],
+                                        ['TSC:', {text:tsc, style: 'memberData'}],
+                                        ['PAFSC:', {text:afsc, style: 'memberData'}],
                                       //  ['2AFSC', {text:afsc2, style: 'memberData'}],
-                                        ['Time in Training', {text:timeInTraining, style: 'memberData'}]
+                                        ['Time in Training:', {text:timeInTraining, style: 'memberData'}]
                                     ]
                                 },
                                 layout: 'noBorders'
@@ -184,10 +196,11 @@ var dd = {
 				    // CDC Data and Core Tasks 
 				   	    
                         [  
-                            'CDC DATA GOES HERE',
+                            'Vol 1 Comp 4 Aug',
                             {
                                 style: 'ojtTask',
                                 layout: 'noBorders',
+                                margin: [0,20,0,0],
                                 table: {
                                     body: [
                                         ['Core Tasks','15','/','30']
@@ -261,4 +274,5 @@ var dd = {
 	}
 	
 }
-	
+
+
