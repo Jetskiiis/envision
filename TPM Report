@@ -58,6 +58,7 @@ var dd = {
 				body: [
 					[{text: 'CDC Failures:', style: 'tableHeader'}, {text: 'Over 24 Months:', style: 'tableHeader'}],
 					[{text: '1', style: 'tableData'}, {text: '2', style: 'tableData'}],
+					[{text: 'Upgraded Last Month:', style: 'tableHeader'}, {text: 'Awaiting 7 Lvl Course:', style: 'tableHeader'}],
 					[{text: '3', style: 'tableData'}, {text: '0', style: 'tableData'}],
 				]
 			}
