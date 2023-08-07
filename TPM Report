@@ -12,7 +12,7 @@ var tsc = 'C'
 var afsc = '2G051'
 var afsc2 = '3P071'
 var timeInTraining = '13'
-var memberName = 'SSgt Snuffy, Ryan'
+var memberName = 'A1C Haverford, Tom'
 
 /*var docDefinition = {
   pageSize: 'A5',}
@@ -206,7 +206,7 @@ var dd = {
                             }
                         ],
 				    //Remarks 
-                        ['Member is progressing.']
+                        ['Monthly Journal Entry: C/W. Will be TDY 20 Aug - 15 Sep.']
                     ]
 				]
 			}
