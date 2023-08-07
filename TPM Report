@@ -1,0 +1,251 @@
+// playground requires you to assign document definition to a variable called dd
+var unitName = '502 LRS'
+var tsc = 'C'
+var afsc = '2T151'
+var timeInTraining = '13'
+var memberName = 'SSgt Snuffy, Ryan'
+
+
+var dd = {
+	content: [
+		{
+
+		    
+			text:[
+			//Var inserts unit name
+            unitName,
+			// add dynamic month function 
+		    ' OJT COVER PAGE\n',
+	    	],
+			style: 'header',
+		
+		},
+		//Table for TSC Totals
+		{
+			style: 'tableExample',
+			table: {
+			   	widths: [100, '*', 200,'*'],
+				body: [
+					['UGT Levels', 'Initial', 'Retraining', 'Total'],
+					['3 Lvl', 'Total', 'Total', 'Total'],
+					['5 Lvl', 'Total', 'Total', 'Total'],
+					['7 Lvl', 'Total', 'Total', 'Total'],
+					
+				]
+			}
+		},
+		//Table for TSC P,K,T
+		{
+			style: 'tableExample',
+			table: {
+			   	widths: [100, '*', 200,'*'],
+				body: [
+					['TSC P', 'TSC K', 'TSC Q', 'TSC T'],
+					['Total', 'Totat', 'Total', 'Total'],
+				
+					
+				]
+			}
+		},	
+        //Table for additional Details
+        {
+			style: 'tableExample',
+			table: {
+			   	widths: [ '*','*'],
+				body: [
+					[{text: 'CDC Failures', style: 'tableData'}, {text: 'Over 24 Months', style: 'tableData'}],
+					['Total', 'Total'],
+			        [{text: 'Upgraded Last Month', style: 'tableData'}, {text: 'Awaiting 7 Lvl Course ', style: 'tableData'}],
+			        ['Total', 'Total'],
+					
+				]
+			}
+		},	
+        //Header for OJT Data 
+        { 
+            text:[ 'OJT DATA'],
+            style: 'header',
+        },
+        //Member Data
+        {
+			style: 'tableExample',
+			table: {
+			   	widths: [ '*','*','*'],
+				body: [
+                    //Headers for ojt data table
+					[{ text: memberName, bold: true, alignment: 'center', decoration: 'underline' }, {text: 'CDC Data/Core Task Competion', style: 'tableData'},{text: 'Remarks', style: 'tableData'}],
+			       // Data for ojt data table 
+
+                   //member data 
+                    [
+						{
+							style: 'memberDataFormat',
+                            table: {
+                                body: [
+                                    ['TSC', {text:tsc, style: 'memberData'}],
+                                    ['PAFSC', afsc],
+                                    ['Time in Training', timeInTraining]
+                                ]
+                            },
+                            layout: 'noBorders'
+						},
+                        
+	
+				    // CDC Data and Core Tasks 
+				   	    {
+							stack: [
+							
+								{
+									ul: [
+										'Vol 1 Completed: 2 Aug',
+										'Core Tasks: 15/30'
+									]
+								}
+							]
+						},
+				    //Remarks 
+                        ''
+                    ]
+				]
+			}
+		},	
+    {
+			style: 'ojtTable',
+			table: {
+			   	widths: [ '*','*','*'],
+				body: [
+                    //Headers for ojt data table
+					[{ text: memberName, bold: true, alignment: 'center', decoration: 'underline' }, {text: 'CDC Data/Core Task Competion', style: 'tableData'},{text: 'Remarks', style: 'tableData'}],
+			       // Data for ojt data table 
+
+                   //member data 
+                    [
+						{
+							style: 'memberDataFormat',
+                            table: {
+                                body: [
+                                    ['TSC', {text:tsc, style: 'memberData'}],
+                                    ['PAFSC', afsc],
+                                    ['Time in Training', timeInTraining]
+                                ]
+                            },
+                            layout: 'noBorders'
+						},
+                        
+	
+				    // CDC Data and Core Tasks 
+				   	    {
+							stack: [
+							
+								{
+									ul: [
+										'Vol 1 Completed: 2 Aug',
+										'Core Tasks: 15/30'
+									]
+								}
+							]
+						},
+				    //Remarks 
+                        ''
+                    ]
+				]
+			}
+		},	
+
+        {
+			style: 'ojtTable',
+			table: {
+			   	widths: [ '*','*','*'],
+				body: [
+                    //Headers for ojt data table
+					[{ text: memberName, bold: true, alignment: 'center', decoration: 'underline' }, {text: 'CDC Data/Core Task Competion', style: 'tableData'},{text: 'Remarks', style: 'tableData'}],
+			       // Data for ojt data table 
+
+                   //member data 
+                    [
+                        [
+                            {
+                                style: 'memberDataFormat',
+                                table: {
+                                    body: [
+                                        ['TSC', {text:tsc, style: 'memberData'}],
+                                        ['PAFSC', afsc],
+                                        ['Time in Training', timeInTraining]
+                                    ]
+                                },
+                                layout: 'noBorders'
+                            },
+                        ],
+	
+				    // CDC Data and Core Tasks 
+				   	    
+                        [  
+                            'CDC DATA GOES HERE',
+                            {
+                                style: 'ojtTask',
+                                layout: 'noBorders',
+                                table: {
+                                    body: [
+                                        ['Core Tasks','15','/','30']
+                                    ]
+                                },
+                            }
+                        ],
+				    //Remarks 
+                        ['Member is progressing.']
+                    ]
+				]
+			}
+		},	
+
+
+	],
+	
+	
+	
+	styles: {
+		header: {
+			fontSize: 18,
+			bold: true,
+			alignment: 'center'
+		},
+		
+		tableExample: {
+	    	margin: [15, 5, 0, 15]
+	   	},
+		
+		ojtTable: {
+	    	margin: [15, -10, 0, 15]
+	   	},
+		
+		tableHeader: {
+			bold: true,
+			fontSize: 20,
+			color: 'black'
+		},
+		
+		tableData: {
+			bold: true,
+			alignment: 'center'
+		},
+		
+		memberDataFormat: {
+		    fontSize: 8,
+		    alignment: 'justified'
+		    
+		},
+
+        memberData: {
+            fontSize:10,
+            bold: true,
+            color: 'black'
+        },
+        
+        coreTask: {
+            margin: [0,5,0,0]
+         }
+
+	}
+	
+	
+}
