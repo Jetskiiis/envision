@@ -65,9 +65,9 @@ var dd = {
 			table: {
 			   	widths: [ '*','*'],
 				body: [
-					[{text: 'CDC Failures:', style: 'tableHeader', fillColor: '#979dac'}, {text: 'Over 24 Months:', style: 'tableHeader', fillColor: '#979dac'}],
+					[{text: 'CDC Failures:', style: 'tableHeader', fillColor: '#979dac'}, {text: 'Over 12 Months:', style: 'tableHeader', fillColor: '#979dac'}],
 					[{text: '1', style: 'tableData'}, {text: '2', style: 'tableData'}],
-					[{text: 'Upgraded Last Month:', style: 'tableHeader', fillColor: '#979dac'}, {text: 'Awaiting 7 Lvl Course:', style: 'tableHeader', fillColor: '#979dac'}],
+					[{text: 'Upgraded Last Month:', style: 'tableHeader', fillColor: '#979dac'}, {text: 'Over 24 Months:', style: 'tableHeader', fillColor: '#979dac'}],
 					[{text: '3', style: 'tableData'}, {text: '0', style: 'tableData'}],
 				]
 			}
@@ -77,93 +77,7 @@ var dd = {
             text:[ 'OJT DATA'],
             style: 'header',
         },
-        //Member Data
-       
-        /* {
-			style: 'tableExample',
-			table: {
-			   	widths: [ '*','*','*'],
-				body: [
-                    //Headers for ojt data table
-					[{ text: memberName, bold: true, alignment: 'center', decoration: 'underline' }, {text: 'CDC Data/Core Task Competion', style: 'tableHeader'},{text: 'Remarks', style: 'tableHeader'}],
-			       // Data for ojt data table 
-
-                   //member data 
-                    [
-						{
-							style: 'memberDataFormat',
-                            table: {
-                                body: [
-                                    ['TSC', {text:tsc, style: 'memberData'}],
-                                    ['PAFSC', afsc],
-                                    ['Time in Training', timeInTraining]
-                                ]
-                            },
-                            layout: 'noBorders'
-						},
-                        
-	
-				    // CDC Data and Core Tasks 
-				   	    {
-							stack: [
-							
-								{
-									ul: [
-										'Vol 1 Completed: 2 Aug',
-										'Core Tasks: 15/30'
-									]
-								}
-							]
-						},
-				    //Remarks 
-                        ''
-                    ]
-				]
-			}
-		},	
-    {
-			style: 'ojtTable',
-			table: {
-			   	widths: [ '*','*','*'],
-				body: [
-                    //Headers for ojt data table
-					[{ text: memberName, bold: true, alignment: 'center', decoration: 'underline' }, {text: 'CDC Data/Core Task Competion', style: 'tableHeader'},{text: 'Remarks', style: 'tableHeader'}],
-			       // Data for ojt data table 
-
-                   //member data 
-                    [
-						{
-							style: 'memberDataFormat',
-                            table: {
-                                body: [
-                                    ['TSC', {text:tsc, style: 'memberData'}],
-                                    ['PAFSC', afsc],
-                                    ['Time in Training', timeInTraining]
-                                ]
-                            },
-                            layout: 'noBorders'
-						},
-                        
-	
-				    // CDC Data and Core Tasks 
-				   	    {
-							stack: [
-							
-								{
-									ul: [
-										'Vol 1 Completed: 2 Aug',
-										'Core Tasks: 15/30'
-									]
-								}
-							]
-						},
-				    //Remarks 
-                        ''
-                    ]
-				]
-			}
-		},	
-*/
+        
         {
 			style: 'tableExample',
 			table: {
