@@ -31,14 +31,20 @@ export class IronBendersFunctions {
         return dateArrived.dateArrivedStation!;
        
     }
-    @Function()
-    private subYears()
+
+    subYears({ date, years }: { date: Date; years: number; }): Date {
+        date.setDate(date.getDate() - years);
+        return date;
+    }
 
     @Function()
     public ibTrngCalc(ibExcessiveTraining: LocalDate) :LocalDate{
-        var f:  = new Date(f.minusYears(2))
-    
-        if (ibExcessiveTraining > f.minusYears() )
+        var f: any  = new Date(f.minusYears(2))
+        let months24:boolean = false
+        if (ibExcessiveTraining <= this.subYears ){
+            months24 = true
+        }
+      
     }
 
 //template for helper function for grabbing properties from Airman/Guardian
