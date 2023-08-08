@@ -24,7 +24,7 @@ var dd = {
 		    
 			text:[
 			//Var inserts unit name and month in title
-            unitName +' '+ month, ' OJT Cover Page',],
+            unitName +' '+ month, ' OJT Summary',],
 			style: 'header',
 		
 		},
@@ -193,7 +193,7 @@ var dd = {
 				    // CDC Data and Core Tasks 
 				   	    
                         [  
-                            'Vol 1 Comp 4 Aug',
+                            'Vol 1 Comp 1 July',
                             {
                                 style: 'ojtTask',
                                 layout: 'noBorders',
@@ -206,7 +206,7 @@ var dd = {
                             }
                         ],
 				    //Remarks 
-                        ['Monthly Journal Entry: C/W. Will be TDY 20 Aug - 15 Sep.']
+                        ['Monthly Journal Entry: C/W. Failed EOC on 4 Aug (63%)']
                     ]
 				]
 			}
