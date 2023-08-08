@@ -25,7 +25,7 @@ export class IronBendersFunctions {
    
    //For testing this is using the Date arrived Station property
     @Function()
-    public ibExcessiveTraining(dateArrived:Airman) :LocalDate {
+    public ibExcessiveTraining(dateArrived:Airman = 2007-12-24) :LocalDate {
       
        
         return dateArrived.dateArrivedStation!;
