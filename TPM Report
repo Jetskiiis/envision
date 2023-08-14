@@ -34,8 +34,8 @@ var dd = {
 			table: {
 			   	widths: ['*', '*', '*','*'],
 				body: [
-					[{text: 'UGT Levels', style: 'tableHeader', fillColor: '#979dac'}, {text: 'Initial:', style: 'tableHeader', fillColor: '#979dac'},{text: 'Retraining:', style: 'tableHeader', fillColor: '#979dac'},{text: 'Total:', style: 'tableHeader', fillColor: '#979dac'}],
-					[{text:'3 Lvl', bold: true}, '0', '0', '0'],
+					[{text: 'UGT Levels', style: 'tableHeader', fillColor: '#8EA4D2'}, {text: 'Initial:', style: 'tableHeader', fillColor: '#8EA4D2'},{text: 'Retraining:', style: 'tableHeader', fillColor: '#8EA4D2'},{text: 'Total:', style: 'tableHeader', fillColor: '#8EA4D2'}],
+					[{text:'3 Lvl', bold: true, fillColor: '#E2E7F3'},{text:'0', bold: true, fillColor: '#E2E7F3'}, {text:'0', bold: true, fillColor: '#E2E7F3'},{text:'0', bold: true, fillColor: '#E2E7F3'},],
 					[{text:'5 Lvl', bold: true}, '3', '0', '3'],
 					[{text:'7 Lvl', bold: true}, '10', '1', '11'],
 					
@@ -48,10 +48,10 @@ var dd = {
 			table: {
 			   	widths: ['*', '*', '*','*'],
 				body: [
-					[{text:'TSC P', style: 'tableHeader', fillColor: '#979dac'},
-					 {text:'TSC K', style: 'tableHeader', fillColor: '#979dac'},
-					 {text:'TSC Q', style: 'tableHeader', fillColor: '#979dac'},
-					 {text:'TSC T', style: 'tableHeader', fillColor: '#979dac'}],
+					[{text:'TSC P', style: 'tableHeader', fillColor: '#8EA4D2'},
+					 {text:'TSC K', style: 'tableHeader', fillColor: '#8EA4D2'},
+					 {text:'TSC Q', style: 'tableHeader', fillColor: '#8EA4D2'},
+					 {text:'TSC T', style: 'tableHeader', fillColor: '#8EA4D2'}],
 					
 					['1', '0', '0', '0'],
 				
@@ -65,9 +65,9 @@ var dd = {
 			table: {
 			   	widths: [ '*','*'],
 				body: [
-					[{text: 'CDC Failures:', style: 'tableHeader', fillColor: '#979dac'}, {text: 'Over 12 Months:', style: 'tableHeader', fillColor: '#979dac'}],
+					[{text: 'CDC Failures:', style: 'tableHeader', fillColor: '#8EA4D2'}, {text: 'Over 12 Months:', style: 'tableHeader', fillColor: '#8EA4D2'}],
 					[{text: '1', style: 'tableData'}, {text: '2', style: 'tableData'}],
-					[{text: 'Upgraded Last Month:', style: 'tableHeader', fillColor: '#979dac'}, {text: 'Over 24 Months:', style: 'tableHeader', fillColor: '#979dac'}],
+					[{text: 'Upgraded Last Month:', style: 'tableHeader', fillColor: '#8EA4D2'}, {text: 'Over 24 Months:', style: 'tableHeader', fillColor: '#8EA4D2'}],
 					[{text: '3', style: 'tableData'}, {text: '0', style: 'tableData'}],
 				]
 			}

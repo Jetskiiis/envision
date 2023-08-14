@@ -4,8 +4,12 @@
 
 ## Questions 
 - How to pass in dates to functions
-- 2AFSC
+//- 2AFSC
 - If we sort the list in workshop will it be passed in the same order 
+- text blocks insert 
+- Time in training link didnt work
+- Foundry API imports wont compile 
+    - preventing functions from being used elsewhere
 
 ## To Do 
 - Function for sorting by time in training and TSC
