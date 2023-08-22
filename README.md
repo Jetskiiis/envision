@@ -2,6 +2,39 @@
 
 
 
+## Outline 
+
+### Section 1
+- Pass in UTM PAS Code
+- Filter PAS down to UGT members  
+- Const Array with DOD IDs
+- Calculat TSC totals 
+
+- Const Output variable 
+	-Call Func w/ HTML f/ overview sections with variables predefined to input info f/ Section 1
+
+### Section 2 
+- For Loop on DOD ID Arr
+	- .search
+		- TSC
+		- PAFSC
+		- Core Tasks
+		- CDC Data 
+		- Remarks 
+	- Update Output variable 
+
+### Section 3 
+- Pass output Variable to Slate for download
+	- Define "OJT Report.html" as default file name
+
+
+
+
+
+
+
+
+
 ## Questions 
 - How to pass in dates to functions
 //- 2AFSC
@@ -13,10 +46,11 @@
 
 ## To Do 
 - Function for sorting by time in training and TSC
+- Verdana Font
 
 ## For Later 
 - unit_hierarchy 
-- parent_pas
+
 
 
 
