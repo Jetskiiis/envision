@@ -2,49 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width= 297mm, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-         .center-table {
+        /* Styles for centering tables */
+        .center-table {
             padding-top: 20px;
-            padding-left: 10px;
-            padding-right: 10px;
-            print-color-adjust: exact;
+           
         }
-        .reportHeader{
-            font-size: 18px; 
-            font-weight: bold; 
+
+        /* Header style */
+        .reportHeader {
+            font-size: 18px;
+            font-weight: bold;
             text-decoration: underline;
-            /* text-align: center; */
+            text-align: center; /* Center text */
         }
-        .summaryTd{
-            border: 2px solid #333; /* Borders for data cells */
+
+        /* Table cell styles */
+        th, td {
+            border: 1px solid #333; /* Borders for data cells */
             padding: 8px;
-            print-color-adjust: exact;
         }
 
-        td{
-            border: 2px solid #333; /* Borders for data cells */
-            padding: 10px;
-            text-align: center ;
-            print-color-adjust: exact;
-        }
-
-        th{
+        /* Highlight header cells */
+        th {
             background-color: #8EA4D2;
-            print-color-adjust: exact;
+            text-align: center;
+            font-weight: bold;
+            text-decoration: underline;  }
+
+            body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh; /* Make sure the body takes up the full viewport height */
+            margin: 0; /* Remove default margin to avoid any offsets */
+            font-family: Arial, sans-serif;
         }
+
     </style>
-    
+    <title>Report Example</title>
 </head>
 <body>
 
     <div class="reportHeader">
-        <center>502 LRS OJT Summary</center>
+        502 LRS OJT Summary
     </div>
     
     <div class="center-table">
         <!-- Table for TSC Totals -->
-        <table style="width: 100%;">
+        <table>
             <tr>
                 <th>UGT Levels</th>
                 <th>Initial:</th>
@@ -61,8 +68,7 @@
         </table>
         
         <!-- Table for TSC P,K,T -->
-        <table style="width: 100%
-;">
+        <table>
             <tr>
                 <th>TSC P</th>
                 <th>TSC K</th>
@@ -79,7 +85,7 @@
     </div>
     
     <div class="center-table">
-        <table style="width: 100%;">
+        <table>
             <tr>
                 <th>CDC Failures:</th>
                 <th>Over 12 Months:</th>
@@ -98,24 +104,23 @@
             </tr>
         </table>
     </div>
-    
 
     <div class="center-table">
-        <table style="width: 100%;">
+        <table>
             <tr>
-                <th style="text-align: center; font-weight: bold; text-decoration: underline;" >
+                <th style="text-align: center;">
                     A1C Haverford, Tom
                 </th>
-                <th style="text-align: center; font-weight: bold; text-decoration: underline;">
+                <th style="text-align: center;">
                     CDC Data/Core Task Competion
                 </th>
-                <th style="text-align: center; font-weight: bold; text-decoration: underline;">
+                <th style="text-align: center;">
                     Remarks
                 </th>
             </tr>
             <tr>
                 <td style="width: 33.33%;">
-                    <table style="width: 100%; font-size: 12px; text-align: justified; border-collapse: collapse;">
+                    <table style="width: 100%; font-size: 8px; text-align: justified; border-collapse: collapse;">
                         <tr>
                             <td>TSC:</td>
                             <td style="font-weight: bold;">C</td>
@@ -124,8 +129,6 @@
                             <td>PAFSC:</td>
                             <td style="font-weight: bold;">2G051</td>
                         </tr>
-                            <td>Core Tasks</td>
-                            <td style="font-weight: bold;"> 15 / 30</td>
                         <!-- Add more rows as needed -->
                     </table>
                 </td>
@@ -133,21 +136,21 @@
                 <td style="width: 33.33%;">
                     <table style="width: 100%; border-collapse: collapse;">
                         <tr>
-                            
-                            
+                            <td>Core Tasks</td>
+                            <td>15</td>
+                            <td>/</td>
+                            <td>30</td>
                         </tr>
                     </table>
                 </td>
                 <td style="width: 33.33%;">
                     Monthly Journal Entry: C/W. 
-                    
+                    <br>
                     Failed EOC on 4 Aug (63%)
                 </td>
             </tr>
         </table>
     </div>
     
-    
-</div>
 </body>
 </html>

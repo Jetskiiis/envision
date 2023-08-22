@@ -11,10 +11,10 @@ export class IronBendersFunctions {
 
 
 // Creates PDF, will be passed the list of airmen in UGT from the Workshop app
-   /* @Function()
+    @Function()
     public IbMain(listOfOjtMembers: ObjectSet<Airman>) :string {
         return listOfOjtMembers.all()[0].trainingStatus!;
-    }*/
+    }
 
     //This needs to be finished once DET is fixed, this function will calculate time in training
     /*@Function()
@@ -31,6 +31,9 @@ export class IronBendersFunctions {
         return dateArrived.dateArrivedStation!;
        
     }
+
+    for ( let i = this.IbMain, i )
+
 
     subYears({ date, years }: { date: Date; years: number; }): Date {
         date.setDate(date.getDate() - years);
