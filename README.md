@@ -5,9 +5,11 @@
 ## Outline 
 
 ### Section 1
-- Pass in UTM PAS Code
-- Filter PAS down to UGT members  
-- Const Array with DOD IDs
+- UTM DOD Id added to OJT Writeback data for each update 
+- Pass in UTM DOD ID to Slate  
+- Filter Writeback Data by UTM DOD ID 
+- Filter A/G by Writeback Data Set 
+- Const Filtered ObSet    
 - Calculat TSC totals 
 
 - Const Output variable 
