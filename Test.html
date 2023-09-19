@@ -29,7 +29,7 @@ let htmlTop = ` -->
             print-color-adjust: exact;
         }
         .reportHeader{
-            font-size: 18px; 
+            font-size: 30px; 
             font-weight: bold; 
             text-decoration: underline;
             /* text-align: center; */
@@ -48,6 +48,7 @@ let htmlTop = ` -->
         }
 
         th{
+            border: 2px solid #333;
             background-color: #8EA4D2;
             print-color-adjust: exact;
             width: 25%;
@@ -63,7 +64,7 @@ let htmlTop = ` -->
     <body>
 
     <div class="reportHeader">
-        <center>502 LRS OJT ${month} COVER PAGE</center>
+        <center>502 LRS OJT ${month} <BR> COVER PAGE</center>
     </div>
     
     <div class="center-table">
@@ -77,66 +78,70 @@ let htmlTop = ` -->
             </tr>
             <tr>
                 <td style="font-weight: bold; background-color: #E2E7F3;">3 Lvl</td>
-                <td style="font-weight: bold; background-color: #E2E7F3;">0</td>
-                <td style="font-weight: bold; background-color: #E2E7F3;">0</td>
-                <td style="font-weight: bold; background-color: #E2E7F3;">${total3Count}</td>
+                <td style="font-weight: bold; ">0</td>
+                <td style="font-weight: bold; ">0</td>
+                <td style="font-weight: bold; ">${total3Count}</td>
             </tr>
             <!-- Add more rows as needed -->
             <tr>
-                 <td style="font-weight: bold; background-color: #E2E7F3;">5 Lvl</td>
-                 <td style="font-weight: bold; background-color: #E2E7F3;">0</td>
-                 <td style="font-weight: bold; background-color: #E2E7F3;">0</td>
-                <td style="font-weight: bold; background-color: #E2E7F3;">${total5Count}</td>
+                 <td style="font-weight: bold;background-color: #E2E7F3;">5 Lvl</td>
+                 <td style="font-weight: bold; ">0</td>
+                 <td style="font-weight: bold; ">0</td>
+                <td style="font-weight: bold; ">${total5Count}</td>
             </tr> <!-- Add more rows as needed -->
             <tr>
                 <td style="font-weight: bold; background-color: #E2E7F3;">7 Lvl</td>
-                <td style="font-weight: bold; background-color: #E2E7F3;">0</td>
-                <td style="font-weight: bold; background-color: #E2E7F3;">16</td>
-                <td style="font-weight: bold; background-color: #E2E7F3;">${total7Count}</td>
+                <td style="font-weight: bold;">0</td>
+                <td style="font-weight: bold;">16</td>
+                <td style="font-weight: bold;">${total7Count}</td>
             </tr> <!-- Add more rows as needed -->
        
         </table>
-        
+    </div>
+
+    <div class="center-table">    
         <!-- Table for TSC P,K,T -->
-        <table style="width: 100%
-    ;">
+        <table style="width: 100%;">
             <tr>
-                <th>TSC P</th>
-                <th>TSC K</th>
-                <th>TSC Q</th>
-                <th>TSC T</th>
+                <th colspan="2"> MISC TSCs</th>
+                <th colspan="2"> TRAINING METRICS</th>
             </tr>
-            <tr>
-                <td>${totalTscP}</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
+            
+            <tr >
+                <th style="width: 25%; background-color: #E2E7F3;">TSC P</th>
+                <td style="width: 25%;">${totalTscP}</td>
+                <th style="background-color: #E2E7F3;">CDC Failures:</th>
+                <td ><input type="text" placeholder ="Enter Data Here"</td>
             </tr>
+
+            </tr>
+                <th style="background-color: #E2E7F3;">TSC Q</th>
+                <td >${totalTscQ}</td>
+                <th style="background-color: #E2E7F3;">Upgraded Last Month:</th>
+                <td ><input type="text" placeholder ="Enter Data Here"</td>
+            </tr>
+                <th style="background-color: #E2E7F3;">TSC K</th>
+                <td >${totalTscK}</td>
+                <th style="background-color: #E2E7F3;">Over 12 Months:</th>
+                <td >0</td>
+            </tr>
+                <th style="background-color: #E2E7F3;">TSC T</th>
+                <td >${totalTscT}</td>
+                <th style="background-color: #E2E7F3;">Over 24 Months:</th>
+                <td >0</td>
+            </tr>
+            
         </table>
     </div>
     
-    <div class="center-table">
-        <table style="width: 100%;" >
-            <tr>
-                <th>CDC Failures:</th>
-                <th>Over 12 Months:</th>
-            </tr>
-            <tr>
-                <td class="tableData"><input type="text" placeholder ="Enter Data Here"</td>
-                <td class="tableData">2</td>
-            </tr>
-            <tr>
-                <th>Upgraded Last Month:</th>
-                <th>Over 24 Months:</th>
-            </tr>
-            <tr>
-                <td class="tableData"><input type="text" placeholder ="# Upgraded Last Month"</td>
-                <td class="tableData">0</td>
-            </tr>
-        </table>
+    
+
+
+
+    <P style="page-break-before: always"> 
+    <div class="reportHeader" style="padding-top: ;">
+        <center>MEMBER INFORMATION</center>
     </div>
-   
-    `
 
 <!-- 
 let memberData = ''
@@ -190,8 +195,8 @@ for (let i = 0; i < changeArr.length; i++) {
                             <td style="font-weight: bold;">${changeArr[i]["tsc"]} </td>
                         </tr>
                         <tr>
-                            <td style="border: none;">CDC Data:</td>
-                            <td style="font-weight: bold;border: none;">${changeArr[i]["cdcData"]} </td>
+                            <td >CDC Data:</td>
+                            <td style="font-weight: bold">${changeArr[i]["cdcData"]} </td>
                         </tr>
                         
                     </table> 
