@@ -1,59 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+let htmlTop = `<!DOCTYPE html> <br>
+    <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width= 297mm, initial-scale=1.0">
     <style>
-        /* Styles for centering tables */
-        .center-table {
+         .center-table {
             padding-top: 20px;
-           
+            padding-left: 10px;
+            padding-right: 10px;
+            print-color-adjust: exact;
         }
-
-        /* Header style */
-        .reportHeader {
-            font-size: 18px;
-            font-weight: bold;
+        .reportHeader{
+            font-size: 18px; 
+            font-weight: bold; 
             text-decoration: underline;
-            text-align: center; /* Center text */
+            /* text-align: center; */
         }
-
-        /* Table cell styles */
-        th, td {
-            border: 1px solid #333; /* Borders for data cells */
+        .summaryTd{
+            border: 2px solid #333; /* Borders for data cells */
             padding: 8px;
+            print-color-adjust: exact;
         }
 
-        /* Highlight header cells */
-        th {
+        td{
+            border: 2px solid #333; /* Borders for data cells */
+            padding: 10px;
+            text-align: center ;
+            print-color-adjust: exact;
+        }
+
+        th{
             background-color: #8EA4D2;
-            text-align: center;
-            font-weight: bold;
-            text-decoration: underline;  }
-
-            body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 100vh; /* Make sure the body takes up the full viewport height */
-            margin: 0; /* Remove default margin to avoid any offsets */
-            font-family: Arial, sans-serif;
+            print-color-adjust: exact;
+            width: 25%;
         }
 
+        input {
+            text-align: center;
+            border: none;
+        }
     </style>
-    <title>Report Example</title>
-</head>
-<body>
+    
+    </head>
+    <body>
 
     <div class="reportHeader">
-        502 LRS OJT Summary
+        <center>502 LRS OJT Summary</center>
     </div>
     
     <div class="center-table">
         <!-- Table for TSC Totals -->
-        <table>
+        <table style="width: 100%;">
             <tr>
-                <th>UGT Levels</th>
+                <th>UGT Levels</th><br>
                 <th>Initial:</th>
                 <th>Retraining:</th>
                 <th>Total:</th>
@@ -62,13 +60,27 @@
                 <td style="font-weight: bold; background-color: #E2E7F3;">3 Lvl</td>
                 <td style="font-weight: bold; background-color: #E2E7F3;">0</td>
                 <td style="font-weight: bold; background-color: #E2E7F3;">0</td>
-                <td style="font-weight: bold; background-color: #E2E7F3;">0</td>
+                <td style="font-weight: bold; background-color: #E2E7F3;">${total3Count}</td>
             </tr>
             <!-- Add more rows as needed -->
+            <tr>
+                 <td style="font-weight: bold; background-color: #E2E7F3;">5 Lvl</td>
+                 <td style="font-weight: bold; background-color: #E2E7F3;">0</td>
+                 <td style="font-weight: bold; background-color: #E2E7F3;">0</td>
+                <td style="font-weight: bold; background-color: #E2E7F3;">${total5Count}</td>
+            </tr> <!-- Add more rows as needed -->
+            <tr>
+                <td style="font-weight: bold; background-color: #E2E7F3;">7 Lvl</td>
+                <td style="font-weight: bold; background-color: #E2E7F3;">0</td>
+                <td style="font-weight: bold; background-color: #E2E7F3;">16</td>
+                <td style="font-weight: bold; background-color: #E2E7F3;">${total7Count}</td>
+            </tr> <!-- Add more rows as needed -->
+       
         </table>
         
         <!-- Table for TSC P,K,T -->
-        <table>
+        <table style="width: 100%
+    ;">
             <tr>
                 <th>TSC P</th>
                 <th>TSC K</th>
@@ -76,7 +88,7 @@
                 <th>TSC T</th>
             </tr>
             <tr>
-                <td>1</td>
+                <td>${totalTscP}</td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
@@ -85,13 +97,13 @@
     </div>
     
     <div class="center-table">
-        <table>
+        <table style="width: 100%;">
             <tr>
                 <th>CDC Failures:</th>
                 <th>Over 12 Months:</th>
             </tr>
             <tr>
-                <td class="tableData">1</td>
+                <td class="tableData"><input type="text" placeholder ="Type CDC Failures"</td>
                 <td class="tableData">2</td>
             </tr>
             <tr>
@@ -99,36 +111,44 @@
                 <th>Over 24 Months:</th>
             </tr>
             <tr>
-                <td class="tableData">3</td>
+                <td class="tableData"><input type="text"</td>
                 <td class="tableData">0</td>
             </tr>
         </table>
     </div>
+   
+    `
 
+
+let memberData = ''
+for (let i = 0; i < changeArr.length; i++) {
+    memberData += `
     <div class="center-table">
-        <table>
+        <table style="width: 100%;">
             <tr>
-                <th style="text-align: center;">
-                    A1C Haverford, Tom
+                <th style="text-align: center; font-weight: bold; text-decoration: underline;" >
+                     ${changeArr[i]["name"]} 
                 </th>
-                <th style="text-align: center;">
+                <th style="text-align: center; font-weight: bold; text-decoration: underline;">
                     CDC Data/Core Task Competion
                 </th>
-                <th style="text-align: center;">
+                <th style="text-align: center; font-weight: bold; text-decoration: underline;">
                     Remarks
                 </th>
             </tr>
             <tr>
                 <td style="width: 33.33%;">
-                    <table style="width: 100%; font-size: 8px; text-align: justified; border-collapse: collapse;">
+                    <table style="width: 100%; font-size: 12px; text-align: justified; border-collapse: collapse;">
                         <tr>
                             <td>TSC:</td>
-                            <td style="font-weight: bold;">C</td>
+                            <td style="font-weight: bold;">${changeArr[i]["tsc"]} </td>
                         </tr>
                         <tr>
                             <td>PAFSC:</td>
-                            <td style="font-weight: bold;">2G051</td>
+                            <td style="font-weight: bold;">${changeArr[i]["pafsc"]}</td>
                         </tr>
+                            <td>Core Tasks</td>
+                            <td style="font-weight: bold;"> 15 / 30</td>
                         <!-- Add more rows as needed -->
                     </table>
                 </td>
@@ -136,21 +156,22 @@
                 <td style="width: 33.33%;">
                     <table style="width: 100%; border-collapse: collapse;">
                         <tr>
-                            <td>Core Tasks</td>
-                            <td>15</td>
-                            <td>/</td>
-                            <td>30</td>
+                            ${changeArr[i]["cdcData"]}
+                            
                         </tr>
                     </table>
                 </td>
                 <td style="width: 33.33%;">
-                    Monthly Journal Entry: C/W. 
-                    <br>
-                    Failed EOC on 4 Aug (63%)
+                    ${changeArr[i]["remarks"]}
+                    
                 </td>
             </tr>
         </table>
     </div>
     
-</body>
-</html>
+    
+    </div>
+    </body>
+    </html>
+    `
+ }
